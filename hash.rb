@@ -32,3 +32,9 @@ myHash.each {|some_key, some_value| puts "they key is #{some_key} and the vale i
 
 # find items using the select method
 myHash.select{|key, value| value.is_a?(String)}
+
+# delete items out if a hash based on data type
+
+myHash.each { |key, value| myHash.delete(key) if value.is_a?(String) }
+
+
